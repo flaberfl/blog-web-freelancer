@@ -62,10 +62,14 @@
 	}
 
 	&__logo {
-		img {
-			width: toRem(60);
-			height: toRem(60);
-		}
+		font-family: $pixelFamily;
+		font-weight: 800;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		// img {
+		// 	width: toRem(60);
+		// 	height: toRem(60);
+		// }
 	}
 
 	&__link {
