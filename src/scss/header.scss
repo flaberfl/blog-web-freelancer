@@ -15,9 +15,9 @@
 
 		background: #fff;
 
-		.main-page & {
-			background: none;
-		}
+		// .main-page & {
+		// 	background: none;
+		// }
 
 		@media (max-width:$tablet) {
 			height: 80px;
@@ -88,6 +88,15 @@
 		gap: toRem(10);
 
 		transition: all 1s;
+
+a {
+	// font-size: toRem(20);
+	// font-family: $boldFamily;
+	// font-family: $pixelFamily;
+	// font-weight: 400;
+	// letter-spacing: 1px;
+	font-size: toRem(18);
+}
 
 		@media (max-width:$tablet) {
 			flex-direction: column;
