@@ -1,0 +1,110 @@
+
+.blog-body {
+  /* .blog-body__filter */
+  &__filter {
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+}
+
+.training-articles {
+
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  /* Основной трюк */
+  gap: 20px;
+
+
+  @media (max-width: toEm(1164)) {
+    gap: toRem(10);
+  }
+
+  @media (max-width:$tablet) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+  }
+
+  @media (max-width: toEm(600)) {
+    grid-template-columns: auto;
+  }
+
+  /* .training-articles__item */
+  &__item {
+    max-width: 389px;
+
+    border: 2px solid var(--white);
+    border-radius: 20px;
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        .training-articles__image {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+
+  /* .training-articles__media */
+  &__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: toRem(20) toRem(20) 0 0;
+
+    justify-self: center;
+  }
+
+  &__image {
+    max-width: 100%;
+    // width: 100%;
+
+    transition: transform 0.3s;
+  }
+
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 60;
+
+    .block & {
+      pointer-events: none;
+    }
+  }
+
+  /* .training-articles__body */
+  &__body {
+
+    background: rgba(255, 255, 255, 0.5);
+
+    @include adaptiveValue("padding-top", 20, 15);
+    @include adaptiveValue("padding-left", 30, 15);
+    @include adaptiveValue("padding-bottom", 30, 15);
+    @include adaptiveValue("padding-right", 30, 15);
+  }
+
+  /* .training-articles__title */
+  &__title {
+    margin-bottom: toRem(10);
+
+    line-height: 110%;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 30, 20);
+  }
+
+  /* .training-articles__decsr */
+  &__decsr {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+.block {}
+
+.favorite-btn {}
