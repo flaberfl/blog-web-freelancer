@@ -124,15 +124,11 @@
 	&__actions {
 		display: flex;
 		align-items: center;
-		// align-items: flex-start;
-		gap: toRem(40);
+		gap: toRem(30);
 
-
-		// padding: toRem(10);
-
-		// background-color: $grayColor;
-
-		border-radius: toRem(5);
+		@media (max-width: toEm(400)) {
+			gap: toRem(20);
+		}
 	}
 
 	&__button {
@@ -155,9 +151,9 @@
 
 		transition: all 0.3s;
 
-		@media (max-width: toEm(540)) {
-			margin-top: toRem(5);
-		}
+		// @media (max-width: toEm(540)) {
+		// 	margin-top: toRem(5);
+		// }
 
 		// @media (any-hover: hover) {
 		// 	&:hover {
