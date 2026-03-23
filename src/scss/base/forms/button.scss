@@ -5,18 +5,18 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 10px 30px;
+	padding: 10px 20px;
 	border-radius: toRem(5);
 	background-color: $brightGreenColor;
 	// background-color: $pinkColor;
-	height: 50px;
+	height: 45px;
 	
 	transition: all 0.3s;
 
 	@include adaptiveValue("font-size", 20, 16);
 
 	@media (max-width:$mobile) {
-		height: 41px;
+		height: 32px;
 	}
 
 

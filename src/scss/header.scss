@@ -47,11 +47,14 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		justify-content: space-between;
 		background-color: #fff;
 		height: 100%;
 
 		z-index: 900;
+
+		@media (min-width:$tablet) {
+			justify-content: space-between;
+		}
 
 
 		// @media (max-width:$tablet) {
@@ -74,6 +77,7 @@
 
 	&__logo {
 		position: relative;
+		margin-bottom: toRem(8);
 		// font-family: $pixelFamily;
 		// font-weight: 800;
 		// letter-spacing: 1px;
@@ -93,15 +97,19 @@
 		// }
 
 		img {
-			max-width: 250px;
+			// max-width: 250px;
 
-			@include adaptiveValue("font-size", 250, 160);
+			@include adaptiveValue("width", 250, 160);
 		}
 
 		// img {
 		// 	width: toRem(60);
 		// 	height: toRem(60);
 		// }
+
+		@media (max-width:$tablet){
+			margin-right: auto;
+		}
 	}
 
 	&__link {
@@ -121,12 +129,18 @@
 	&__button {
 		font-family: $pixelFamily;
 		font-weight: 800;
+		font-size: toRem(16);
+		letter-spacing: 1px;
 	}
 
 	&__search {
 		cursor: pointer;
 
 		transition: all 0.3s;
+
+		@media (max-width: toEm(540)){
+			 margin-top: toRem(5); 
+		}
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -154,7 +168,11 @@
 			// font-family: $pixelFamily;
 			// font-weight: 400;
 			// letter-spacing: 1px;
-			font-size: toRem(18);
+			font-size: toRem(16);
+
+			@media (max-width:$tablet) {
+				font-size: toRem(14);
+			}
 		}
 
 		@media (max-width:$tablet) {
@@ -192,6 +210,7 @@
 
 .icon-menu {
 	display: none;
+	margin-left: toRem(15);
 
 	@media (max-width: $tablet) {
 		display: block;
