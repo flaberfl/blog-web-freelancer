@@ -107,7 +107,7 @@
 		// 	height: toRem(60);
 		// }
 
-		@media (max-width:$tablet){
+		@media (max-width:$tablet) {
 			margin-right: auto;
 		}
 	}
@@ -123,14 +123,29 @@
 	&__actions {
 		display: flex;
 		align-items: center;
-		gap: toRem(40)
+		gap: toRem(40);
+
+
+		// padding: toRem(10);
+
+		background-color: $grayColor;
+
+		border-radius: toRem(5);
 	}
 
 	&__button {
+
+		flex-shrink: 0;
+
 		font-family: $pixelFamily;
 		font-weight: 800;
 		font-size: toRem(16);
 		letter-spacing: 1px;
+
+		@media (min-width:$tablet) {
+			margin-left: toRem(20);
+
+		}
 	}
 
 	&__search {
@@ -138,8 +153,8 @@
 
 		transition: all 0.3s;
 
-		@media (max-width: toEm(540)){
-			 margin-top: toRem(5); 
+		@media (max-width: toEm(540)) {
+			margin-top: toRem(5);
 		}
 
 		@media (any-hover: hover) {
@@ -151,12 +166,16 @@
 }
 
 .menu {
+	// display: flex;
+	// align-items: center;
+
 	@media (max-width:$tablet) {
 		display: contents;
 	}
 
 	&__body {
 		display: flex;
+		align-items: center;
 		width: 100%;
 		gap: toRem(10);
 

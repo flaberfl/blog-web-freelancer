@@ -1,12 +1,18 @@
 .link {
   padding: toRem(10);
   border-radius: toRem(5);
-  
-transition: all 0.3s;
+
+  transition: all 0.3s;
 
   @media (any-hover: hover) {
     &:hover {
       background-color: rgba(255, 215, 233, .35);
     }
+  }
+}
+
+.tg-link {
+  svg {
+    max-width: toRem(30);
   }
 }
