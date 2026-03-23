@@ -34,7 +34,7 @@ import * as flsFunctions from "./files/functions.js";
 /* Добавление класса touch для HTML если браузер мобильный */
 // flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
-flsFunctions.addLoadedClass();
+// flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 flsFunctions.menuInit();
 /* Форматирование чисел */
@@ -45,14 +45,14 @@ flsFunctions.menuInit();
 Документация: https://start-template.ru/modul-spojlery-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): spollers
 */
-flsFunctions.spollers();
+// flsFunctions.spollers();
 
 /*
 Модуль "Табы"
 Документация: https://start-template.ru/modul-taby-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): tabs
 */
-flsFunctions.tabs();
+// flsFunctions.tabs();
 
 /*
 Модуль "Показать еще"
@@ -94,7 +94,7 @@ flsFunctions.tabs();
 Документация: https://start-template.ru/modul-popup-vytekayushhie-modalnye-okna-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): pl, pop
 */
-import './libs/popup.js'
+// import './libs/popup.js'
 
 /*
 Модуль анимации (параллакс) объектов во время движения мыши
@@ -127,7 +127,7 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-import './libs/select.js'
+// import './libs/select.js'
 
 /* Модуль работы с календарем */
 // import './files/forms/datepicker.js'
@@ -168,7 +168,7 @@ import './libs/select.js'
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-import "./files/sliders.js";
+// import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================

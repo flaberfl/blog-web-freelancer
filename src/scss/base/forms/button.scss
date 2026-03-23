@@ -8,7 +8,8 @@
 	padding: 10px 30px;
 	border-radius: toRem(5);
 	background-color: $brightGreenColor;
-	height: 47px;
+	// background-color: $pinkColor;
+	height: 50px;
 	
 	transition: all 0.3s;
 
@@ -24,7 +25,8 @@
 	@media (any-hover: hover) {
 		&:hover {
 			color: #fff;
-			background-color: #64d210;
+			// background-color: #64d210;
+			background-color: $mainColorBac;
 		}
 	}
 }

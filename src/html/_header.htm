@@ -1,28 +1,24 @@
 <header class="header" data-scroll-show data-scroll="60">
 
-	<div class="header__wrapper">
+	<div class="header__wrapper __container">
 		<div class="header__container">
 
-			<button type="button" aria-label="Open menu" aria-checked="false" class="icon-menu">
-				<span></span>
-			</button>
-
 			<a href="" class="header__logo">
-				Web-Freelancer
+				<img src="@img/logo.svg" alt="Image">
 			</a>
 
 
-			<div class="header__menu menu">
+			<div class="header__menu menu" data-da=".header,992">
 				<div class="menu__body">
 					<a href="" class="menu__item link link--menu">Фриланс</a>
 					<a href="" class="menu__item link link--menu">Статьи</a>
-					<a href="" class="menu__item link link--menu">Медитации</a>
+					<a href="" class="menu__item link link--menu">Обучение</a>
 				</div>
 			</div>
 
 
 			<div class="header__actions">
-				<div class="header-search">
+				<div class="header__search">
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M20 20H18V18H20V20ZM18 18H16V16H18V18ZM12 16H4V14H12V16ZM16 16H14V14H16V16ZM4 14H2V12H4V14ZM14 14H12V12H14V14ZM2 12H0V4H2V12ZM16 12H14V4H16V12ZM4 4H2V2H4V4ZM14 4H12V2H14V4ZM12 2H4V0H12V2Z"
@@ -30,16 +26,13 @@
 					</svg>
 
 				</div>
-				<a href="profile-personal.html" class="header__link link link--lk">Заказать услугу</a>
-				<a href="profile-personal.html" class="mob-btn-lk">
-					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="40" height="40" rx="10" fill="#B9FF83" />
-						<circle cx="20" cy="15" r="4" fill="#282828" />
-						<ellipse cx="20" cy="25" rx="7" ry="4" fill="#282828" />
-					</svg>
+				<a href="profile-personal.html" class="header__link header__button button">Заказать услугу</a>
 
-				</a>
 			</div>
+
+			<button type="button" aria-label="Open menu" aria-checked="false" class="icon-menu">
+				<span></span>
+			</button>
 
 		</div>
 	</div>
