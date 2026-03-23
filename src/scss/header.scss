@@ -75,6 +75,7 @@
 		// }
 	}
 
+
 	&__logo {
 		position: relative;
 		margin-bottom: toRem(8);
@@ -123,12 +124,13 @@
 	&__actions {
 		display: flex;
 		align-items: center;
+		// align-items: flex-start;
 		gap: toRem(40);
 
 
 		// padding: toRem(10);
 
-		background-color: $grayColor;
+		// background-color: $grayColor;
 
 		border-radius: toRem(5);
 	}
@@ -157,11 +159,11 @@
 			margin-top: toRem(5);
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				transform: scale(1.3);
-			}
-		}
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		transform: scale(1.3);
+		// 	}
+		// }
 	}
 }
 
