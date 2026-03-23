@@ -45,6 +45,8 @@
       display: block;
       margin-bottom: toRem(15);
 
+
+
       font-size: 38px;
       font-family: $boldFamily;
 
@@ -56,6 +58,8 @@
     margin-top: toRem(40);
     display: flex;
     align-items: center;
+
+    text-decoration: underline;
 
     font-family: $boldFamily;
     // font-family: $pixelFamily;
@@ -83,7 +87,7 @@
 
   &__info-list {
     display: grid;
-    gap: toRem(5);
+    gap: toRem(8);
 
     font-family: $pixelFamily;
   }
