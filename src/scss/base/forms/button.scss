@@ -2,7 +2,7 @@
 // Сниппет (HTML): btn
 
 .button {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 10px 20px;
@@ -10,10 +10,10 @@
 	background-color: $brightGreenColor;
 	// background-color: $pinkColor;
 	height: 45px;
-	
+
 	transition: all 0.3s;
 
-	@include adaptiveValue("font-size", 20, 16);
+	@include adaptiveValue("font-size", 18, 14);
 
 	@media (max-width:$mobile) {
 		height: 32px;
@@ -29,4 +29,14 @@
 			background-color: $mainColorBac;
 		}
 	}
+}
+
+.load-more-button {
+	margin: 0 auto;
+
+	@include adaptiveValue("margin-top", 80, 40);
+}
+
+.load-more-button.hidden {
+	display: none;
 }

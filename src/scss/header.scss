@@ -181,13 +181,14 @@
 			opacity: 0;
 			padding: 20px 9px 25px;
 			gap: 8px !important;
+			z-index: 700;
+
 
 			.menu-open & {
 				// transform: scale(1);
 				transition: all .7s;
 				opacity: 1;
 				visibility: visible;
-				// z-index: 700;
 				// background-color: $whiteColor;
 				transform: translate(0, 80px);
 				border-radius: 0 0 10px 10px;

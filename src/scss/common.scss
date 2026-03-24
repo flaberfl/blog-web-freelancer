@@ -16,3 +16,10 @@
     max-width: toRem(28);
   }
 }
+
+.title-h2 {
+  font-size: toRem(36);
+  font-family: $boldFamily;
+
+  @include adaptiveValue("margin-bottom", 30, 20);
+}

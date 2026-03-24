@@ -11,6 +11,45 @@ window.addEventListener("load", function () {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const allPostItems = document.querySelectorAll('.posts__items .post-item');
+  const loadMoreButton = document.getElementById('loadMoreBtn');
+
+  const initialVisibleCount = 6; // Изначально видно 6 элементов
+  const itemsToShowPerClick = 6; // Количество элементов, которое откроется по клику
+
+  let currentIndex = initialVisibleCount; // Индекс первого элемента, который *может* быть показан следующим
+
+  // Функция для обновления видимости кнопки
+  function updateButtonVisibility() {
+    // Если текущий индекс (место, где начнутся следующие показываемые) больше или равен общем        // значит, всё показали.
+    if (currentIndex >= allPostItems.length) {
+      loadMoreButton.classList.add('hidden'); // Используем класс для скрытия
+    } else {
+      loadMoreButton.classList.remove('hidden'); // Показываем кнопку
+    }
+  }
+
+  // Изначально проверяем, нужно ли сразу скрывать кнопку (если всего 6 или меньше элементов)
+  updateButtonVisibility();
+
+  loadMoreButton.addEventListener('click', function () {
+    let shownThisTime = 0;
+
+    // Цикл для показа следующих itemsToShowPerClick элементов
+    for (let i = currentIndex; i < allPostItems.length && shownThisTime < itemsToShowPerClick; i++) {
+      allPostItems[i].style.display = 'block'; // Показываем элемент
+      currentIndex++; // Переходим к следующему потенциальному элементу
+      shownThisTime++; // Увеличиваем счётчик показанных в этом клике
+    }
+
+    // После показа новых элементов, проверяем, нужно ли скрыть кнопку
+    updateButtonVisibility();
+  });
+});
+
+
 // Проверяем наличие элемента .header
 
 // const header = document.querySelector('.header');

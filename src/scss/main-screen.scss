@@ -4,7 +4,6 @@
 
   &__container {
 
-
     margin-top: toRem(-5);
     padding-top: toRem(50);
     // background-color: #fff;
@@ -32,6 +31,7 @@
       width: 100%;
       height: 100%;
       inset: 0;
+      opacity: .7;
 
       position: absolute;
       background: url('@img/main-bk3.jpg') 0 0 no-repeat;

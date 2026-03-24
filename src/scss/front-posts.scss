@@ -79,3 +79,8 @@
     }
   }
 }
+
+
+.posts__items .post-item:nth-child(n+7) {
+    display: none;
+}
