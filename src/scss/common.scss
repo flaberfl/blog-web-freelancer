@@ -21,5 +21,6 @@
   font-size: toRem(36);
   font-family: $boldFamily;
 
+  @include adaptiveValue("font-size", 36, 24);
   @include adaptiveValue("margin-bottom", 30, 20);
 }
