@@ -42,6 +42,22 @@
       background: url('@img/main-bk3.jpg') 0 0 no-repeat;
       background-size: cover;
       background-position: 0;
+
+      @media (max-width:$mobile) {
+        background-repeat: repeat;
+        background-position: 118%;
+        background-position-y: 160px;
+      }
+
+      @media (max-width: toEm(560)) {
+        background-position: 98%;
+        background-position-y: 160px;
+      }
+
+      @media (max-width: toEm(390)) {
+        background-position: 95%;
+        background-position-y: 110px;
+      }
     }
 
     @media (max-width:$tablet) {
@@ -92,7 +108,10 @@
     text-decoration: underline;
 
     font-family: $boldFamily;
-    // font-family: $pixelFamily;
+    line-height: toRem(18);
+
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("margin-top", 40, 15);
 
     &--link {
       margin-left: toRem(15);
@@ -131,20 +150,23 @@
     width: 100%;
     max-width: toRem(300);
 
-    align-self: flex-start;
+    align-self: center;
 
 
     @media (max-width:$tablet) {
       position: absolute;
       z-index: 20;
       width: 100%;
-      align-self: flex-start;
       right: -30px;
       bottom: 80px;
       object-fit: contain;
       height: 240px;
     }
 
-    @media (max-width: toEm(630)) {}
+    @media (max-width:$mobile) {
+      position: relative;
+      right: auto;
+      bottom: auto;
+    }
   }
 }
