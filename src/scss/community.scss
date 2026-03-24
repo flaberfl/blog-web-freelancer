@@ -9,7 +9,7 @@
 
   /* .community__wrapper */
   &__wrapper {
-
+    overflow: hidden;
     display: grid;
     grid-template-columns: auto 40%;
     gap: 20px;
@@ -29,9 +29,9 @@
       grid-template-columns: auto;
     }
 
-    @media (max-width:$mobileSmall){
-       margin-right: -10px;
-       margin-left: -10px; 
+    @media (max-width:$mobileSmall) {
+      margin-right: -10px;
+      margin-left: -10px;
     }
   }
 
@@ -40,8 +40,22 @@
     padding-top: toRem(50);
     display: flex;
     flex-direction: column;
+    position: relative;
 
     @include adaptiveValue("padding-top", 50, 30);
+
+    img {
+      position: absolute;
+      right: -76px;
+      bottom: 20px;
+      transform: rotate(-30deg);
+
+      @media (max-width: toEm(536)) {
+        right: -176px;
+        bottom: 20px;
+        transform: rotate(-60deg);
+      }
+    }
   }
 
   /* .community__title */
@@ -53,17 +67,19 @@
 
   /* .community__subtitle */
   &__subtitle {
-
+    position: relative;
     line-height: toRem(26);
 
     margin-bottom: toRem(30);
+
+    z-index: 100;
 
     @media (min-width:$tablet) {
       max-width: toRem(480);
     }
 
-    @media (max-width:$mobile){
-       font-size: toRem(16); 
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
     }
   }
 
@@ -74,16 +90,19 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-width: 560px;
+    position: relative;
 
     margin-bottom: toRem(40);
+
+    z-index: 100;
 
     @media (max-width:$tablet) {
       // grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: toRem(10);
     }
 
-    @media (max-width: toEm(600)){
-       grid-template-columns: auto; 
+    @media (max-width: toEm(600)) {
+      grid-template-columns: auto;
     }
   }
 
@@ -105,8 +124,11 @@
     margin-top: auto;
     align-self: flex-start;
     display: inline-flex;
-    
-    @media (max-width:$tablet){
+    position: relative;
+
+    z-index: 100;
+
+    @media (max-width:$tablet) {
       align-self: center;
     }
   }
@@ -114,9 +136,12 @@
   /* .community__image */
   &__image {
     max-width: 100%;
-    border-radius: toRem(20);
+    position: relative;
 
-    @media (max-width:$tablet){
+    border-radius: toRem(20);
+    z-index: 100;
+
+    @media (max-width:$tablet) {
       width: 50%;
       margin: 0 auto;
     }

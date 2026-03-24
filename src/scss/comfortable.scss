@@ -71,7 +71,10 @@
   }
 
   &__subtitle {
+    position: relative;
     line-height: 26px;
+
+    z-index: 100;
   }
 
   /* .comfortable__items */
