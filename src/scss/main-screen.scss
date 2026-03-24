@@ -11,6 +11,7 @@
   }
 
   &__box {
+    position: relative;
     width: 100%;
     display: flex;
     gap: toRem(20);
@@ -24,9 +25,24 @@
     margin: 0 auto;
     border-radius: toRem(5);
     background-color: $brightGreenColor;
+
+    &::before {
+      mix-blend-mode: overlay;
+      content: '';
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      opacity: .6;
+      position: absolute;
+      background: url('@img/main-bk.jpg') 0 0 no-repeat;
+      background-size: cover;
+      // z-index: 0;
+    }
   }
 
   &__content {
+    position: relative;
+    z-index: 20;
     // width: 65%;
   }
 
@@ -67,6 +83,7 @@
     &--link {
       margin-left: toRem(15);
       margin-bottom: toRem(4);
+
       img {
         width: toRem(30);
       }
@@ -76,8 +93,8 @@
       // font-size: 25px;
       transition: all 0.3s;
 
-      @media (any-hover: hover){
-        &:hover{
+      @media (any-hover: hover) {
+        &:hover {
           transform: scale(1.4);
         }
       }
@@ -93,6 +110,8 @@
   }
 
   &__image {
+    position: relative;
+    z-index: 20;
     width: 100%;
     max-width: toRem(300);
 

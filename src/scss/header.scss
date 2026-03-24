@@ -190,7 +190,13 @@
 				// z-index: 700;
 				// background-color: $whiteColor;
 				transform: translate(0, 80px);
-				border-radius: 0 0 6px 6px;
+				border-radius: 0 0 10px 10px;
+			}
+		}
+
+		@media (max-width:$mobile) {
+			.menu-open & {
+				transform: translate(0, 50px);
 			}
 		}
 	}
