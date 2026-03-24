@@ -101,14 +101,12 @@
   }
 
   &__subtitle {
-    margin-top: toRem(40);
     display: flex;
     align-items: center;
 
     text-decoration: underline;
-
     font-family: $boldFamily;
-    line-height: toRem(18);
+    line-height: toRem(20);
 
     @include adaptiveValue("font-size", 18, 14);
     @include adaptiveValue("margin-top", 40, 15);
@@ -121,9 +119,6 @@
         width: toRem(30);
       }
 
-      // text-decoration: underline;
-      // text-transform: uppercase;
-      // font-size: 25px;
       transition: all 0.3s;
 
       @media (any-hover: hover) {
