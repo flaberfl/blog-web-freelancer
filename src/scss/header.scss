@@ -70,9 +70,14 @@
 	&__logo {
 		position: relative;
 
-		svg {
-			@include adaptiveValue("width", 250, 180);
+		img {
+			// max-width: 100%;
+				@include adaptiveValue("width", 250, 160);
 		}
+
+		// svg {
+		// 	@include adaptiveValue("width", 250, 180);
+		// }
 
 		// img {
 		// 	width: toRem(60);

@@ -2,9 +2,9 @@
   // margin-top: toRem(80);
   // margin-top: toRem(40);
   // background-color: #fff;
-  padding-bottom: toRem(30);
-  @include adaptiveValue("padding-top", 50, 30);
-  @include adaptiveValue("padding-bottom", 30, 20);
+  // padding-bottom: toRem(30);
+  @include adaptiveValue("margin-top", 80, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
 }
 
 .posts {
@@ -143,4 +143,10 @@
 
 .posts__items .post-item:nth-child(n+7) {
   display: none;
+}
+
+
+.last-posts {
+  @include adaptiveValue("padding-top", 80, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
 }
