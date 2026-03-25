@@ -31,7 +31,8 @@
 	}
 }
 
-.load-more-button {
+.load-more-button,
+.load-all-button {
 	margin: 0 auto;
 
 	@include adaptiveValue("margin-top", 80, 40);

@@ -24,3 +24,7 @@
   @include adaptiveValue("font-size", 36, 24);
   @include adaptiveValue("margin-bottom", 30, 20);
 }
+
+.hidden {
+  display: none !important;
+}
