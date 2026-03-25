@@ -18,11 +18,11 @@
 		@media (min-width:$tablet) {
 			border-radius: toRem(10);
 			margin-top: toRem(20);
-
 		}
 
 		@media (max-width:$tablet) {
 			position: relative;
+			padding: 0;
 
 			height: toRem(80);
 		}
@@ -69,10 +69,9 @@
 
 	&__logo {
 		position: relative;
-		margin-bottom: toRem(8);
 
-		img {
-			@include adaptiveValue("width", 250, 150);
+		svg {
+			@include adaptiveValue("width", 250, 180);
 		}
 
 		// img {
