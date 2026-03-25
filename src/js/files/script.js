@@ -51,7 +51,7 @@ window.addEventListener("load", function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const allPostItems = document.querySelectorAll('.posts__items .post-item');
+  const allPostItems = document.querySelectorAll('.front-posts__items .post-item');
   const loadMoreButton = document.getElementById('loadMoreBtn');
   const loadAllButton = document.getElementById('loadAllBtn');
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       loadAllButton.classList.remove('hidden'); // Показываем "Смотреть все"
     } else {
       loadMoreButton.classList.remove('hidden');
-      loadAllButton.classList.add('hidden'); // Скрываем "Смотреть все"
+      loadAllButton.classList.add('hidden');    // Скрываем "Смотреть все"
     }
   }
 
