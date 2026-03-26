@@ -1,3 +1,109 @@
 <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__content">
 
+      <a href="" class="footer__img">
+        <img src="@img/my-logo.svg" alt="Логотип">
+      </a>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Разделы</h4>
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item"><a href="">Фриланс</a></li>
+          <li class="footer__menu-item"><a href="">Статьи</a></li>
+          <li class="footer__menu-item"><a href="">Обучение</a></li>
+          <li class="footer__menu-item"><a href="">Кейсы</a></li>
+          <li class="footer__menu-item"><a href="">Статьи</a></li>
+          <li class="footer__menu-item"><a href="">Карта сайта</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Наши услуги</h4>
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item"></li>
+
+        </ul>
+      </div>
+
+      <div class="footer__column footer__column--new-post">
+        <h4 class="footer__title">Новые статьи</h4>
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item"><a href="">Название статьи</a></li>
+          <li class="footer__menu-item"><a href="">Название статьи</a></li>
+          <li class="footer__menu-item"><a href="">Название статьи</a></li>
+          <li class="footer__menu-item"><a href="">Название статьи</a></li>
+          <li class="footer__menu-item"><a href="">Название статьи</a></li>
+          <li class="footer__menu-item"><a href="">Название статьи</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column footer__column--contacts">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__menu-list footer__menu-list--contacts">
+          <li class="footer__menu-item"><a href="mailto:ilifia@mail.ru">ilifia@mail.ru</a></li>
+          <li class="footer__menu-item"><a href="tel:+79990000000">+7 999 000 00 00</a></li>
+          <li>
+            <ul class="footer__social-list">
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        &copy; <span id="currentYear"></span> Web-Freelancer. Все права защищены.
+        <div id="currentTime"></div>
+      </div>
+      <div class="footer__policy-links">
+        <a href="/privacy-policy" class="footer__link">Политика конфиденциальности</a>
+        <a href="/terms-of-service" class="footer__link">Условия использования</a>
+      </div>
+    </div>
+
+  </div>
 </footer>
+
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  function updateTime() {
+    // Получаем текущую дату и время
+    const now = new Date();
+
+    // Форматируем строку в удобочитаемый вид, например: День.Месяц.Год Часы:Минуты:Секунды
+    // Методы getMonth() возвращают индекс (0-11), поэтому добавляем 1
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // +1 потому что январь - 0
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    const formattedDateTime = `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
+
+    // Находим элемент по ID и обновляем его содержимое
+    // Предположим, у вас теперь элемент с ID 'currentTime'
+    const timeElement = document.getElementById('currentTime');
+    if (timeElement) {
+      timeElement.textContent = formattedDateTime;
+    }
+
+    // Также обновляем год, если нужен отдельно (хотя в текущем формате он уже есть)
+    // const yearElement = document.getElementById('currentYear');
+    // if (yearElement) {
+    //     yearElement.textContent = now.getFullYear();
+    // }
+  }
+
+  // Вызываем функцию сразу время при загрузке страницы
+  updateTime();
+
+  // Устанавливаем интервал для обновления времени каждую секунду (1000 миллисекунд)
+  setInterval(updateTime, 1000);
+</script>
