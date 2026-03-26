@@ -11,15 +11,48 @@
   // .footer__content
 
   &__content {
-    display: flex;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
+    justify-items: center;
     gap: toRem(20);
- 
 
     @include adaptiveValue("margin-bottom", 40, 20);
+
+    @media (max-width: toEm(1360)) {
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: start;
+    }
+
+    @media (max-width:$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+
+      row-gap: toRem(35);
+    }
+
+    @media (max-width: toEm(520)) {
+      grid-template-columns: auto;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: toRem(25);
+    }
+
+
+    // @media (max-width: toEm(1230)) {
+    //   flex-wrap: wrap;
+    // }
   }
 
   // .footer__img
+
+  &__logo {
+    margin-top: toRem(-10);
+
+    @media (max-width: toEm(520)) {
+      margin-top: 0;
+    }
+  }
 
   &__img {}
 
@@ -59,6 +92,10 @@
   &__menu-item {
     font-size: toRem(14);
 
+    svg {
+      flex: 0 0 20px;
+    }
+
     .footer__column--price & {
 
       display: flex;
@@ -86,15 +123,29 @@
 
   // .footer__column--price
 
-  &__column--price {}
+  &__column--price {
+    // justify-self: start;
+  }
 
   // .footer__column--new-post
 
-  &__column--new-post {}
+  &__column--new-post {
+    max-width: toRem(260);
+
+    @media (max-width: toEm(1360)) {
+      // grid-column: span 2;
+      // justify-self: start;
+    }
+  }
 
   // .footer__column--contacts
 
-  &__column--contacts {}
+  &__column--contacts {
+
+    @media (max-width: toEm(1360)) {
+      grid-column: span 1.5;
+    }
+  }
 
   // .footer__menu-list--contacts
 
@@ -117,8 +168,8 @@
           display: block;
           margin-top: toRem(4);
 
-          @media (any-hover: hover){
-            &:hover{
+          @media (any-hover: hover) {
+            &:hover {
               text-decoration: underline;
             }
           }
@@ -137,10 +188,10 @@
   &__bottom {
     background: var(--grey);
 
-    font-size: toRem(14);
+    font-size: toRem(13);
 
-    @include adaptiveValue("padding-top", 40, 20);
-    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-top", 30, 20);
+    @include adaptiveValue("padding-bottom", 30, 20);
   }
 
   &__container {
@@ -163,8 +214,8 @@
   // .footer__link
 
   &__link {
-    @media (any-hover: hover){
-      &:hover{
+    @media (any-hover: hover) {
+      &:hover {
         text-decoration: underline;
       }
     }
