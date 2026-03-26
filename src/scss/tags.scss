@@ -1,0 +1,54 @@
+.best-tag {
+
+  // .best-tag__container
+
+  &__container {}
+
+  // .best-tag__title
+
+  &__title {}
+
+  // .best-tag__content
+
+  &__content {}
+
+  // .best-tag__link
+
+  &__link {}
+}
+
+.tag {
+
+  // .tag__content
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(15);
+  }
+
+  // .tag__link
+
+  &__link {
+    padding: toRem(8) toRem(10);
+
+    border-radius: toRem(6);
+
+    background-color: #fff;
+
+    font-family: $pixelFamily;
+    font-size: toRem(16);
+    font-weight: 600;
+    color: $mainColorBac;
+
+    transition: all 0.3s;
+
+    @include adaptiveValue("font-size", 16, 14);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(255, 215, 233, 0.35);
+      }
+    }
+  }
+}

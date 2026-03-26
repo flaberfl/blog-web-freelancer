@@ -29,10 +29,10 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: toEm(630)){
-       grid-template-columns: auto;
-       max-width: toRem(400);
-       margin: 0 auto;
+    @media (max-width: toEm(630)) {
+      grid-template-columns: auto;
+      max-width: toRem(400);
+      margin: 0 auto;
     }
 
   }
@@ -107,8 +107,8 @@
 
     @include adaptiveValue("margin-bottom", 20, 12);
 
-    @media (max-width:$mobileSmall){
-       font-size: 12px; 
+    @media (max-width:$mobileSmall) {
+      font-size: 12px;
     }
   }
 
@@ -126,15 +126,20 @@
     font-size: toRem(20);
     line-height: 26px;
     color: #000;
+    padding: toRem(10);
+    margin: toRem(-10);
 
-    @media (max-width:$mobile){
-       font-size: toRem(16); 
-       line-height: toRem(24);
+    border-radius: toRem(6);
+
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
+      line-height: toRem(24);
     }
 
     @media (any-hover: hover) {
       &:hover {
-        font-weight: 600;
+        background-color: rgba(255, 215, 233, 0.35);
+
       }
     }
   }
