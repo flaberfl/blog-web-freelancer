@@ -58,7 +58,15 @@
 
   // .footer__column
 
-  &__column {}
+  &__column {
+    // &:last-child {
+    //   justify-self: end;
+    // }
+
+    // &:nth-last-child(2) {
+    //   justify-self: end;
+    // }
+  }
 
   &__slogan {
     max-width: toRem(230);
@@ -199,7 +207,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      gap: toRem(20);
+      flex-wrap: wrap;
     }
   }
 
