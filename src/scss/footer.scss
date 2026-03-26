@@ -2,7 +2,6 @@
   background-color: #fff;
 
   @include adaptiveValue("padding-top", 40, 20);
-  @include adaptiveValue("padding-bottom", 40, 20);
 
 
   // .footer__container
@@ -25,11 +24,14 @@
   &__column {}
 
   &__slogan {
-    max-width: 300px;
+    max-width: toRem(230);
     margin-top: toRem(20);
 
     font-family: $boldFamily;
     line-height: 22px;
+    color: $mainColorBac;
+
+    font-size: toRem(16);
   }
 
   // .footer__title
@@ -45,7 +47,7 @@
 
   &__menu-list {
     display: grid;
-    gap: toRem(8);
+    gap: toRem(10);
   }
 
   // .footer__menu-item
@@ -53,11 +55,18 @@
   &__menu-item {
     font-size: toRem(14);
 
-    a {
+    .footer__column--price & {
 
-      span {
-        margin-top: toRem(2);
+      display: flex;
+      align-items: center;
+      gap: toRem(6);
+
+      svg {
+        margin-bottom: toRem(4);
       }
+    }
+
+    a {
 
       &.button {
         margin: 0;
@@ -95,13 +104,18 @@
       a {
         display: flex;
         align-items: center;
+        gap: toRem(3);
 
 
         font-size: toRem(14);
 
+        span {
+          display: block;
+          margin-top: toRem(4);
+        }
 
         img {
-          max-width: 28px;
+          max-width: 24px;
         }
       }
     }
@@ -110,7 +124,23 @@
 
   // .footer__bottom
 
-  &__bottom {}
+  &__bottom {
+    background: var(--grey);
+
+    font-size: toRem(14);
+
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-bottom", 40, 20);
+  }
+
+  &__container {
+    .footer__bottom & {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+  }
 
   // .footer__copyright
 
