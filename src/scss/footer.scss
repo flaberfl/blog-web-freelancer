@@ -13,6 +13,10 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    gap: toRem(20);
+ 
+
+    @include adaptiveValue("margin-bottom", 40, 20);
   }
 
   // .footer__img
@@ -112,9 +116,15 @@
         span {
           display: block;
           margin-top: toRem(4);
+
+          @media (any-hover: hover){
+            &:hover{
+              text-decoration: underline;
+            }
+          }
         }
 
-        img {
+        svg {
           max-width: 24px;
         }
       }
@@ -152,5 +162,11 @@
 
   // .footer__link
 
-  &__link {}
+  &__link {
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
