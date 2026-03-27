@@ -104,4 +104,15 @@
   @include adaptiveValue("padding-bottom", 40, 20);
 }
 
-.page-bottom__container {}
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  color: #463c3e;
+
+  a {
+    text-decoration: underline;
+  }
+}
