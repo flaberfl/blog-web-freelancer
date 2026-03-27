@@ -56,12 +56,10 @@
 }
 
 .pagination {
-  @include adaptiveValue("padding-top", 60, 30);
-  @include adaptiveValue("padding-bottom", 40, 20);
-
-  img {
-    max-width: 20px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: toRem(10);
 }
 
 .page-numbers {
@@ -70,15 +68,40 @@
   background-color: #fff;
   transition: all 0.3s;
 
-@media (any-hover: hover){
-  &:hover{
-    background: $pinkColor;
+  @media (any-hover: hover) {
+    &:hover {
+      background: $pinkColor;
+    }
   }
-}
 }
 
 .current {
   font-family: $boldFamily;
 }
 
-.next {}
+.next-page {
+  img {
+    max-width: 24px;
+    margin-bottom: toRem(3);
+
+    opacity: .6;
+  }
+}
+
+.prev-page {
+  img {
+    max-width: 24px;
+    margin-bottom: toRem(3);
+    transform: rotate(-180deg);
+
+    opacity: .6;
+  }
+}
+
+
+.page-bottom {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 40, 20);
+}
+
+.page-bottom__container {}
