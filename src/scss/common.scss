@@ -68,6 +68,8 @@
   background-color: #fff;
   transition: all 0.3s;
 
+  @include adaptiveValue("font-size", 16, 14);
+
   @media (any-hover: hover) {
     &:hover {
       background: $pinkColor;
@@ -112,7 +114,73 @@
   font-size: 0.875rem;
   color: #463c3e;
 
+  @include adaptiveValue("margin-top", 60, 30);
+  @include adaptiveValue("margin-bottom", 50, 30);
+
+
   a {
     text-decoration: underline;
   }
+
+  span {
+    font-weight: 600;
+  }
 }
+
+.arhive-header {
+
+  /* .arhive-header__container */
+  &__container {}
+
+  &__wrapper {
+    overflow: hidden;
+    min-height: toRem(200);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: toRem(10);
+    background-color: #fff;
+
+    @include adaptiveValue("margin-bottom", 60, 30);
+
+    img {
+      position: absolute;
+      right: 0;
+    }
+
+  }
+
+  /* .arhive-header__content */
+  &__content {
+    position: relative;
+
+    padding-left: toRem(30);
+    padding-right: toRem(30);
+    max-width: toRem(750);
+
+    z-index: 20;
+    @include adaptiveValue("padding-right", 30, 10);
+    @include adaptiveValue("padding-left", 30, 10);
+  }
+
+  /* .arhive-header__desc */
+  &__desc {
+    // position: relative;
+
+    line-height: 24px;
+    font-family: $pixelFamily;
+
+    // z-index: 20;
+    @include adaptiveValue("font-size", 20, 16);
+  }
+}
+
+.arhive-headeer {
+
+  /* .arhive-headeer__title */
+  &__title {}
+}
+
+.title-h2 {}
