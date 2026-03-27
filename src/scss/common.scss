@@ -49,3 +49,32 @@
     /* Возвращаем к исходному размеру */
   }
 }
+
+.all-posts {
+  @include adaptiveValue("padding-top", 30, 20);
+  @include adaptiveValue("padding-bottom", 80, 30);
+}
+
+.pagination {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 40, 20);
+}
+
+.page-numbers {
+  padding: toRem(8) toRem(10);
+  border-radius: toRem(5);
+  background-color: #fff;
+  transition: all 0.3s;
+
+@media (any-hover: hover){
+  &:hover{
+    background: $pinkColor;
+  }
+}
+}
+
+.current {
+  font-family: $boldFamily;
+}
+
+.next {}
