@@ -12,15 +12,15 @@
     display: grid;
     grid-template-columns: 1fr 68%;
     gap: toRem(20);
-    
+
     overflow: hidden;
     border-radius: 20px;
     background-color: $grayColor;
-    
+
     @include adaptiveValue("padding-left", 50, 10);
     @include adaptiveValue("padding-right", 50, 10);
     @include adaptiveValue("margin-bottom", 50, 30);
-    
+
     // @media (max-width:$tablet){
     //   grid-template-columns: 1fr 60%;
     // }
@@ -43,10 +43,10 @@
     position: relative;
     align-self: flex-start;
     margin-top: auto;
-    
+
     z-index: 100;
 
-    @media (max-width:$tablet){
+    @media (max-width:$tablet) {
       margin-top: toRem(20);
     }
   }
@@ -98,9 +98,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(20);
-    
+
     z-index: 100;
-    
+
     // @media (max-width:$tablet){
     //   grid-template-columns: auto;
     // }

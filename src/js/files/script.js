@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const loadMoreButton = document.getElementById('loadMoreBtn');
   const loadAllButton = document.getElementById('loadAllBtn');
 
+
+  if (!loadAllButton) {
+    console.log("Кнопка 'loadAllBtn' не найдена на этой странице.");
+    return; // Прерываем выполнение, если кнопка не найдена
+  }
+
   const initialVisibleCount = 6;
   const itemsToShowPerClick = 6;
 
@@ -69,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
       loadAllButton.classList.remove('hidden'); // Показываем "Смотреть все"
     } else {
       loadMoreButton.classList.remove('hidden');
-      loadAllButton.classList.add('hidden');    // Скрываем "Смотреть все"
+      loadAllButton.classList.add('hidden'); // Скрываем "Смотреть все"
     }
   }
 

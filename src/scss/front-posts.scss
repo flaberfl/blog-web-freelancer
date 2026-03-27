@@ -174,8 +174,6 @@
 
   }
 
-  /* .post-item__date */
-  &__date {}
 
   /* .post-item__title */
   &__title {
@@ -202,7 +200,7 @@
 }
 
 
-.posts__items .post-item:nth-child(n+7) {
+.main .posts__items .post-item:nth-child(n+7) {
   display: none;
 }
 
