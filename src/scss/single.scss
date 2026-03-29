@@ -1,0 +1,75 @@
+.single {
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+		/* .single__sidebar */
+		&__sidebar {
+		}
+		/* .single__content */
+		&__content {
+		}
+		/* .single__title */
+		&__title {
+		}
+		/* .single__list */
+		&__list {
+		}
+		/* .single__list--item */
+		&__list--item {
+		}
+		/* .single__banner */
+		&__banner {
+		}
+}
+.article {
+		/* .article__title */
+		&__title {
+      font-size: toRem(40);
+      // font-family: $boldFamily;
+      font-family: $pixelFamily;
+      font-weight: 800;
+		}
+		/* .article__slogan */
+		&__slogan {
+		}
+		/* .article__header */
+		&__header {
+		}
+		/* .article__date */
+		&__date {
+		}
+		/* .article__share */
+		&__share {
+		}
+		/* .article__social */
+		&__social {
+		}
+		/* .article__image */
+		&__image {
+		}
+		/* .article__body */
+		&__body {
+		}
+		/* .article__h2 */
+		&__h2 {
+      font-size: 30px;
+      font-family: $boldFamily;
+		}
+		/* .article__h3 */
+		&__h3 {
+      font-size: 24px;
+		}
+		/* .article__banner */
+		&__banner {
+		}
+		/* .article__sub */
+		&__sub {
+		}
+		/* .article__more-link */
+		&__more-link {
+		}
+		/* .article__footer */
+		&__footer {
+		}
+}
