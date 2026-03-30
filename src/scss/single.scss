@@ -40,29 +40,32 @@
   /* .article__slogan */
   &__slogan {
     margin-bottom: toRem(20);
-    font-style: italic;
+
+    font-family: $pixelFamily;
     font-size: toRem(16);
-    // font-family: $boldFamily;
+    font-style: italic;
     line-height: toRem(26);
   }
 
   &__top {
-    background-color: #fff;
+    margin-bottom: toRem(40);
     padding: 30px 0;
+
+    background-color: rgba(255, 215, 233, 0.35);
     border-radius: toRem(5);
   }
 
   /* .article__header */
   &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    justify-items: center;
-    // justify-content: space-between;
-    margin-bottom: toRem(20);
-    // max-width: toRem(325);
-    margin-left: auto;
-    margin-right: auto;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    // justify-items: center;
+    // // justify-content: space-between;
+    // margin-bottom: toRem(20);
+    // // max-width: toRem(325);
+    // margin-left: auto;
+    // margin-right: auto;
   }
 
   /* .article__date */
@@ -77,15 +80,17 @@
   /* .article__image */
   &__image {
 
-    border-radius: toRem(5);
 
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    // max-width: toRem(325);
     max-width: 100%;
-    // aspect-ratio: 670 / 250;
+    // margin-bottom: toRem(20);
+    // max-width: toRem(325);
+    // aspect-ratio: 670 / 400;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    border-radius: toRem(5);
   }
 
   /* .article__body */
