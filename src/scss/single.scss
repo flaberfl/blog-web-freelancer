@@ -109,6 +109,18 @@
       font-size: 28px;
       line-height: 120%;
     }
+
+    h3 {
+      padding: 20px 0;
+
+      font-size: 22px;
+      line-height: 120%;
+    }
+
+    ul, ol {
+      position: relative;
+      padding-left: toRem(30);
+    }
   }
 
   /* .article__h2 */
@@ -116,7 +128,7 @@
 
   /* .article__h3 */
   &__h3 {
-    font-size: 24px;
+    // font-size: 24px;
   }
 
   /* .article__banner */
