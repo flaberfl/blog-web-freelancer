@@ -97,14 +97,22 @@
   &__body {
     color: #181818;
     line-height: 150%;
+
+    p {
+      margin-bottom: toRem(25);
+    }
+
+    h2 {
+      padding: toRem(25) 0;
+
+      font-family: $boldFamily;
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
 
   /* .article__h2 */
-  &__h2 {
-    font-size: 30px;
-    font-family: $boldFamily;
-    font-size: 20px;
-  }
+  &__h2 {}
 
   /* .article__h3 */
   &__h3 {
